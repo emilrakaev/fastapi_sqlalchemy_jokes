@@ -13,5 +13,5 @@ async def insert_into_db(joke: JokeIn):
 
 
 async def insert_jokes(data):
-    joke_in_db = [insert_into_db(JokeIn(**data[i])) for i in range(len(data))]
+    joke_in_db = [insert_into_db(JokeIn(**i)) for i in data]
     await asyncio.gather(*joke_in_db)
