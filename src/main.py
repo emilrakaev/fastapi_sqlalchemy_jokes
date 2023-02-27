@@ -21,7 +21,7 @@ async def shutdown():
     await database.disconnect()
 
 
-@app.post('/', response_model=List[schemas.JokeIn], status_code=status.HTTP_201_CREATED)
+@app.post('/load_jokes', response_model=List[schemas.JokeIn], status_code=status.HTTP_201_CREATED)
 async def load_jokes(joke_ap: list = Depends(deps.get_jokes_from_api)):
     await use_cases.insert_jokes(joke_ap)
     return joke_ap
