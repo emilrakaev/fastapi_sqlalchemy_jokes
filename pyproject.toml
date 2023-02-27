@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "fastapi-sqlalchemy-jokes"
+version = "0.1.0"
+description = ""
+authors = ["emil_rakaev <emil.rakaev@zensoft.io>"]
+readme = "README.md"
+packages = [{include = "fastapi_sqlalchemy_jokes"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.92.0"
+uvicorn = "^0.20.0"
+databases = "^0.7.0"
+asyncpg = "^0.27.0"
+psycopg2 = "^2.9.5"
+aiohttp = "^3.8.4"
+python-dotenv = "^1.0.0"
+pytest = "^7.2.1"
+httpx = "^0.23.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
